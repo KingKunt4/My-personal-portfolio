@@ -1,0 +1,17 @@
+<!DOCKTYPE html>
+<html>
+    <head>
+        <title>Connected Devices</title>
+        {% load static %}
+        <link rel="stylesheet" href= "{% static "styles.css" %}">
+        
+    </head>
+    <body>
+        <h1>Connected Devices:</h1>
+        <ul>
+            {% for n in devices %}
+                <li class="list_item">Device: {{n.device}} | Location: {{n.location}}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
